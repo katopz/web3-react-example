@@ -1,5 +1,5 @@
-# hello-web3
-Mess up with web3
+# hello-web3-react
+Mess up web3 with React
 
 ```
 testrpc
