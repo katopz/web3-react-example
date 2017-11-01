@@ -47,9 +47,9 @@ class App extends Component {
     this.setState({ loading: false, coinbase, balance })
   }
 
-  showAccount = () =>
+  showAccount = lucky =>
     this.web3.eth.accounts.map((account, index) => (
-      <li key={index}>
+      <li key={index} style={{ color: lucky === account ? 'red' : 'black' }}>
         {account}
         <ol>{this.web3.eth.getBalance(account).toString()}</ol>
       </li>
@@ -64,7 +64,7 @@ class App extends Component {
       <div>
         <p>coinbase : {this.state.coinbase}</p>
         <p>balance : {this.state.balance}</p>
-        <ul>{this.showAccount()}</ul>
+        <ul>{this.showAccount(this.state.lucky)}</ul>
         <p>lucky : {this.state.lucky}</p>
         <p>transaction : {this.state.transaction}</p>
       </div>
