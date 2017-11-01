@@ -1,4 +1,4 @@
-# hello-web3-react
+# web3-react-example
 Mess up web3 with React
 
 ```
